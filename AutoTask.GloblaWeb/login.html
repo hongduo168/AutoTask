@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>授权认证</title>
+    <link href="/CrystalQuartzPanel.axd?path=Styles.bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href='/CrystalQuartzPanel.axd?path=Styles.main.css' rel='stylesheet' type='text/css' />
+    <link href='/CrystalQuartzPanel.axd?path=Fonts.flaticon.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <header class="cq-main-header">
+        <div class="cq-main-header-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="cq-header-item cq-scheduler col-xs-9 col-md-5">
+                        <div class="cq-scheduler-status"></div>
+                        <h1 class="cq-scheduler-name">Authorization Panel</h1>
+                    </div>
+
+                    <div id="commandIndicator" class="col-xs-3 col-md-2 cq-header-item"></div>
+
+                    <div class="col-xs-3 col-md-5 cq-header-item visible-md-block visible-lg-block">
+                        <a class="cq-leave-link" href="javascript:;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="cq-main-content">
+        <section class="cq-scheduler-properties"></section>
+
+        <section class="container">
+            <div class="form-group col-md-offset-3 col-lg-6" style="margin-top:50px">
+                <form method="post" action="/login.ashx">
+                    <div class="col-lg-10">
+                        <input type="text" class="form-control input-group" name="passcode" />
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="submit" class="form-control input-group-btn btn-sm" value="登录" />
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

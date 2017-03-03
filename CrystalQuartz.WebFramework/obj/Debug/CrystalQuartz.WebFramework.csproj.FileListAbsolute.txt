@@ -1,0 +1,4 @@
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.WebFramework\bin\Debug\CrystalQuartz.WebFramework.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.WebFramework\bin\Debug\CrystalQuartz.WebFramework.pdb
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.WebFramework\obj\Debug\CrystalQuartz.WebFramework.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.WebFramework\obj\Debug\CrystalQuartz.WebFramework.pdb

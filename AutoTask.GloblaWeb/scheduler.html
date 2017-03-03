@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>任务管理</title>
+    <link href="/CrystalQuartzPanel.axd?path=Styles.bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href='/CrystalQuartzPanel.axd?path=Styles.main.css' rel='stylesheet' type='text/css' />
+    <link href='/CrystalQuartzPanel.axd?path=Fonts.flaticon.css' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <header class="cq-main-header">
+        <div class="cq-main-header-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="cq-header-item cq-scheduler col-xs-9 col-md-5">
+                        <div class="cq-scheduler-status"></div>
+                        <h1 class="cq-scheduler-name">Scheduler Panel</h1>
+                    </div>
+
+                    <div id="commandIndicator" class="col-xs-3 col-md-2 cq-header-item"></div>
+
+                    <div class="col-xs-3 col-md-5 cq-header-item visible-md-block visible-lg-block">
+                        <a class="cq-leave-link" href='/CrystalQuartzPanel.axd'>Quartz Panel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="cq-main-content">
+        <section class="cq-scheduler-properties"></section>
+
+        <section class="container">
+            <article class="cq-job-group">
+                <header class="cq-job-group-header">
+                    <span class="status"></span>
+
+                    <section class="actions">
+                        <a style="color: #fff" href="logout.ashx">Logout</a>
+                    </section>
+
+                    <h2 class="cq-job-group-header-title name">任务设置</h2>
+                </header>
+                <section class="content" data-bind="foreach: $root.group">
+                    <article class="cq-job">
+                        <header class="cq-job-header clearfix">
+                            <div class="status"></div>
+
+                            <a class="cq-job-header-title loadDetails name" href="javascript:;" data-bind="text: $data">Group</a>
+                            <section class="actions">
+                                <a href="#" class="execute cq-button" data-bind="click: $root.restart">restart service</a>
+                            </section>
+                        </header>
+
+                        <section class="detailsContainer">
+                        </section>
+
+                        <table class="cq-triggers triggers">
+                            <thead>
+                                <tr>
+                                    <th style="width: 80px">Job Name</th>
+                                    <th style="width: 161px">Description</th>
+                                    <th style="width: 161px">Cron Expression</th>
+                                    <th style="width: 161px">Start DateTime</th>
+                                    <th style="width: 161px">End DateTime</th>
+                                    <th style="width: 162px">Request Host</th>
+                                    <th style="width: 162px">Request Path</th>
+                                    <th style="width: 90px"></th>
+                                </tr>
+                            </thead>
+                            <tbody data-bind="foreach: $root.list">
+                                <!-- ko if: $parent == JOB_GROUP() -->
+                                <tr>
+                                    <td style="height:38px;word-wrap:break-word; word-break:break-all" data-bind="text: JOB_NAME"></td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" name="jobName" data-bind="value: DESCRIPTION, visible: ShowInput()" value="" placeholder="Description" />
+                                        <span data-bind="text: DESCRIPTION, visible: !ShowInput()"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" name="jobName" data-bind="value: CRON_EXPRESSION, visible: ShowInput()" value="" placeholder="Cron Expression" />
+                                        <span data-bind="text: CRON_EXPRESSION, visible: !ShowInput()"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" name="jobName" data-bind="value: START_TIME, visible: ShowInput()" value="" placeholder="yyyy/mm/dd hh:mm:ss" />
+                                        <span data-bind="text: START_TIME, visible: !ShowInput()"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" name="jobName" data-bind="value: END_TIME, visible: ShowInput()" value="" placeholder="yyyy/mm/dd hh:mm:ss" />
+                                        <span data-bind="text: END_TIME, visible: !ShowInput()"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" name="jobName" data-bind="value: REQUESTHOST, visible: ShowInput()" value="" placeholder="http://www.qq.com/" />
+                                        <span data-bind="text: REQUESTHOST, visible: !ShowInput()"></span>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control input-sm" name="jobName" data-bind="value: REQUESTPATH, visible: ShowInput()" value="" placeholder="/path" />
+                                        <span data-bind="text: REQUESTPATH, visible: !ShowInput()"></span>
+                                    </td>
+                                    <td>
+                                        <section class="actions">
+                                            <a href="javascript:;" class="update cq-button" data-bind="click: $root.update, visible: ShowInput()">更新</a>
+                                            <a href="javascript:;" class="update cq-button" data-bind="click: $root.cancel, visible: ShowInput()">取消</a>
+                                            <a href="javascript:;" class="modify cq-button" data-bind="click: $root.modify, visible: !ShowInput()">修改</a>
+                                        </section>
+                                    </td>
+                                </tr>
+                                <!-- /ko -->
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <section class="actions"><a href="javascript:;" class="update cq-button" data-bind="click: $root.addtion">新增</a></section>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </article>
+
+                </section>
+            </article>
+        </section>
+    </div>
+    <script type="text/javascript" src="/Scripts/knockout-3.4.0.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        var processing = false;
+        var ViewModel = function () {
+            var root = this;
+
+            this.list = ko.observableArray([]);
+            this.group = ko.observableArray([]);
+
+            root.koinfo = function (data) {
+                var obj = {};
+                for (var o in data) {
+                    if (data[o] instanceof Function) {
+                        obj[o] = data[o];
+                    }
+                    else {
+                        obj[o] = ko.observable(data[o]);
+                    }
+                }
+
+                return obj;
+            };
+
+            //加载列表数据
+            this.loadData = function () {
+                if (processing) return;
+                processing = true;
+
+                root.group.removeAll();
+                root.list.removeAll();
+                var date = new Date();
+                $.getJSON("/scheduler_list.ashx?"+date.getTime(), function (json) {
+                    processing = false;
+                    if (json) {
+                        for (var i = 0; i < json.group.length; i++) {
+                            var item = json.group[i];
+                            root.group.push(item);
+                        }
+                        for (var i = 0; i < json.list.length; i++) {
+                            var item = json.list[i];
+                            item.ShowInput = false;
+                            root.list.push(root.koinfo(item));
+                        }
+                    } else {
+                        window.location.replace("/login.html");
+                    }
+                });
+            };
+
+            this.update = function (data, event) {
+                if (!data.CRON_EXPRESSION()) {
+                    alert("需要指定任务执行时间！");
+                    return;
+                }
+                if (!data.REQUESTHOST()) {
+                    alert("需要指定任务请求的主机！");
+                    return;
+                }
+                if (!data.REQUESTPATH()) {
+                    alert("需要指定任务请求的路径！");
+                    return;
+                }
+
+                data.ShowInput(false);
+                if (processing) return;
+                processing = true;
+                var date = new Date();
+                $.post("/update_scheduler.ashx?" + date.getTime(), data, function (content) {
+                    console.log(content);
+                    processing = false;
+                    if (!content) {
+                        alert("服务器繁忙！");
+                    }
+
+                    if (!data.JOB_NAME()) {
+                        data.JOB_NAME(content);
+                    }
+                });
+            };
+
+            this.modify = function (data, event) {
+                data.ShowInput(true);
+            };
+
+            
+
+            this.cancel = function (data, event) {
+                data.ShowInput(false);
+            };
+
+            this.addtion = function (data, event) {
+                var first = root.list() && root.list()[0];
+                if (!first) {
+                    return;
+                }
+
+                var item = {
+                    ShowInput: true,
+                    DESCRIPTION: "",
+                    CRON_EXPRESSION: "",
+                    START_TIME: "",
+                    END_TIME: "",
+                    REQUESTHOST: "",
+                    REQUESTPATH: "",
+                    HOST: first.HOST(),
+                    JOB_NAME: "",
+                    JOB_GROUP: first.JOB_GROUP()
+                };
+
+                root.list.push(root.koinfo(item));
+            };
+
+            this.restart = function (data, event) {
+                if (processing) return;
+                processing = true;
+                var param = root.list().filter(function (item) { return item.JOB_GROUP() == data })[0];
+                var text = $(event.target).text();
+                $(event.target).text("restarting...");
+                $.post("/restart_service.ashx", param, function (content) {
+                    $(event.target).text(text);
+                    processing = false;
+                    if (!content) {
+                        alert("服务重启失败，请查看日志！");
+                    }
+                });
+            };
+
+            root.loadData();
+
+
+        };
+
+        $(document).ready(function () {
+
+            var view = new ViewModel();
+            ko.applyBindings(view);
+        });
+    </script>
+</body>
+</html>

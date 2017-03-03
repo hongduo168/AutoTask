@@ -1,0 +1,14 @@
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\CrystalQuartz.Core.dll.config
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\CrystalQuartz.Core.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\CrystalQuartz.Core.pdb
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Common.Logging.Core.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Common.Logging.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Quartz.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Common.Logging.pdb
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Common.Logging.xml
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Common.Logging.Core.pdb
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Common.Logging.Core.xml
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Quartz.pdb
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\bin\Debug\Quartz.xml
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\obj\Debug\CrystalQuartz.Core.dll
+D:\MSTFS\Framework\SourceCode\AutoTask\AutoTaskWeb\CrystalQuartz.Core\obj\Debug\CrystalQuartz.Core.pdb
